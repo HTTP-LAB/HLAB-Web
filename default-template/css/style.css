@@ -1,0 +1,42 @@
+ * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background: #fafafa;
+    font-family: pretendard;
+  }
+  .masonry {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .masonry-column {
+    float: left;
+    width: 25%; /* 4컬럼 */
+    padding: 0 10px;
+  }
+  .masonry-item {
+    background: white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  .masonry-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgb(0 0 0 / 0.2);
+  }
+  .masonry-item img {
+    width: 100%;
+    display: block;
+  }
+  /* float clear */
+  .clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  }

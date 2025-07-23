@@ -1,0 +1,122 @@
+<!-- http한 파일에 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>H-LAB</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0; padding: 20px;
+    background: #fafafa;
+    font-family: Arial, sans-serif;
+  }
+  .masonry {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .masonry-column {
+    float: left;
+    width: 25%; /* 4컬럼 */
+    padding: 0 10px;
+  }
+  .masonry-item {
+    background: white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  .masonry-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgb(0 0 0 / 0.2);
+  }
+  .masonry-item img {
+    width: 100%;
+    display: block;
+  }
+  /* float clear */
+  .clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+</style>
+</head>
+<body>
+
+  <header>
+
+    <h2 style="text-align:center">H-LAB</h2>
+  </header>
+
+<div id="masonry" class="masonry clearfix"></div>
+
+<script>
+  // 카드에 쓸 이미지 주소 리스트 (높이 다른 샘플 이미지)
+  const IMG_LIST = [
+    '/assets/imgs/Hlab_img1.png',
+    '/assets/imgs/Hlab_img2.png',
+    '/assets/imgs/Hlab_img3.png',
+    '/assets/imgs/Hlab_img4.png',
+    '/assets/imgs/Hlab_img5.png',
+    '/assets/imgs/Hlab_img6.png',
+    '/assets/imgs/Hlab_img7.png',
+    '/assets/imgs/Hlab_img8.png',
+    '/assets/imgs/Hlab_img9.png',
+    '/assets/imgs/Hlab_img10.png',
+    '/assets/imgs/Hlab_img11.png',
+    '/assets/imgs/Hlab_img12.png',
+    '/assets/imgs/Hlab_img13.png',
+    '/assets/imgs/Hlab_img14.png',
+    '/assets/imgs/Hlab_img15.png',
+    '/assets/imgs/Hlab_img16.png',
+    '/assets/imgs/Hlab_img17.png',
+    '/assets/imgs/Hlab_img18.png',
+    '/assets/imgs/Hlab_img19.png',
+    '/assets/imgs/Hlab_img20.png',
+  ];
+
+  const masonry = document.getElementById('masonry');
+  const columnsCount = 4; // 컬럼 수
+  let columns = [];
+
+  // 컬럼 div 생성 후 masonry 안에 추가
+  for(let i=0; i<columnsCount; i++){
+    const col = document.createElement('div');
+    col.className = 'masonry-column';
+    masonry.appendChild(col);
+    columns.push(col);
+  }
+
+  // 각 이미지로 카드 생성해서 가장 짧은 컬럼에 넣기
+  IMG_LIST.forEach(src => {
+    const item = document.createElement('div');
+    item.className = 'masonry-item';
+    const img = document.createElement('img');
+    img.src = src;
+    item.appendChild(img);
+
+    // 이미지가 로드된 후에 컬럼 높이 계산해 가장 짧은 컬럼에 넣기
+    img.onload = () => {
+      // 가장 높이 작은 컬럼 찾기
+      let minCol = columns[0];
+      for(let col of columns){
+        if(col.scrollHeight < minCol.scrollHeight){
+          minCol = col;
+        }
+      }
+      minCol.appendChild(item);
+    }
+  });
+</script>
+<footer>김종민 | 박준상 | 신수연 | 이제용</footer>
+
+</body>
+</html>
