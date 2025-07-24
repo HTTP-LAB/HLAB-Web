@@ -24,12 +24,14 @@ jobs:
         run: |
           ssh ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
             set -e
-            cd ${{ secrets.EC2_PATH }}
 
-            # Git pull or clone if not yet
-            if [ ! -d ".git" ]; then
-              git clone https://github.com/${{ github.repository }} .
-            else
-              git pull origin main
-            fi
+            for dir in http1 http2 http3; do
+              cd /HTTP-Version-Test/docker/$dir/static
+              # Git pull or clone if not yet
+              if [ ! -d ".git" ]; then
+                git clone https://github.com/${{ github.repository }} .
+              else
+                git pull origin main
+              fi
+            done
           EOF
