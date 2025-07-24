@@ -26,7 +26,7 @@ jobs:
             set -e
 
             for dir in http1 http2 http3; do
-              cd /HTTP-Version-Test/docker/$dir/static
+              cd ~/HTTP-Version-Test/docker/$dir/static
               # Git pull or clone if not yet
               if [ ! -d ".git" ]; then
                 git clone https://github.com/${{ github.repository }} .
