@@ -6,9 +6,6 @@
     <title>H-LAB - optimization http2</title>
     
     <!-- CSS Files -->
-    <!-- 우선적으로 보여져야할 리소스에 preload -->
-    <link rel="preload" href="./css/style1.css" as="style">
-    <link rel="preload" href="./css/style2.css" as="style">
 
     <link rel="stylesheet" href="./css/style1.css">
     <link rel="stylesheet" href="./css/style2.css">
@@ -16,8 +13,8 @@
     <link rel="stylesheet" href="./css/style4.css">
     <link rel="stylesheet" href="./css/style5.css">
 
-    <link rel="preload" href="../assets/fonts/pretendard/Pretendard-Black.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="../assets/fonts/pretendard/Pretendard-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="../assets/fonts/pretendard/Pretendard-Black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/pretendard/Pretendard-Bold.woff2" as="font" type="font/woff2" crossorigin>
 
     
     <style>
@@ -272,6 +269,18 @@
         </div>
     </section>
 
+    <!-- emoji section -->
+    <section id="emoji-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">이모지</h2>
+            </div>
+            <div id="emoji-container">
+                
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -288,5 +297,6 @@
     <script defer src="./js/app3.js"></script>
     <script defer src="./js/app4.js"></script>
     <script defer src="./js/app5.js"></script>
+    <script defer src="./js/emoji.js"></script>
 </body>
 </html>
