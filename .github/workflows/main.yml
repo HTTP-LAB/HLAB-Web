@@ -20,13 +20,13 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
 
-      - name: Deploy with SSH
+      - name: Deploy with SSH && Re-build docker-compose
         run: |
           ssh ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
             set -e
 
             for dir in http1 http2 http3; do
-              cd ~/HTTP-Version-Test/docker/$dir/static
+              cd ${{ secrets.EC2_PATH }}$dir/static
               # Git pull or clone if not yet
               if [ ! -d ".git" ]; then
                 git clone https://github.com/${{ github.repository }} .
@@ -34,4 +34,6 @@ jobs:
                 git pull origin main
               fi
             done
+            cd ${{ secrets.EC2_PATH }}
+            docker-compose up --build -d
           EOF
