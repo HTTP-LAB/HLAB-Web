@@ -1,0 +1,28 @@
+.icon-sprite {
+    width: 16px;
+    height: 16px;
+    background-image: url('../../assets/icons/icon_sprite.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+.icon-1  { background-position:   0px 0; }
+.icon-2  { background-position: -16px 0; }
+.icon-3  { background-position: -32px 0; }
+.icon-4  { background-position: -48px 0; }
+.icon-5  { background-position: -64px 0; }
+.icon-6  { background-position: -80px 0; }
+.icon-7  { background-position: -96px 0; }
+.icon-8  { background-position: -112px 0; }
+.icon-9  { background-position: -128px 0; }
+.icon-10 { background-position: -144px 0; }
+.icon-11 { background-position: -160px 0; }
+.icon-12 { background-position: -176px 0; }
+.icon-13 { background-position: -192px 0; }
+.icon-14 { background-position: -208px 0; }
+.icon-15 { background-position: -224px 0; }
+.icon-16 { background-position: -240px 0; }
+.icon-17 { background-position: -256px 0; }
+.icon-18 { background-position: -272px 0; }
+.icon-19 { background-position: -288px 0; }
+.icon-20 { background-position: -304px 0; }
+.icon-21 { background-position: -320px 0; }
