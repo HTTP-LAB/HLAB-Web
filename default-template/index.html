@@ -1,259 +1,280 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>H-LAB - HTTP Performance Lab</title>
-
+    
     <!-- CSS Files -->
-    <link rel="stylesheet" href="./css/style1.css" />
-    <link rel="stylesheet" href="./css/style2.css" />
-    <link rel="stylesheet" href="./css/style3.css" />
-    <link rel="stylesheet" href="./css/style4.css" />
-    <link rel="stylesheet" href="./css/style5.css" />
-
+    <link rel="stylesheet" href="./css/style1.css">
+    <link rel="stylesheet" href="./css/style2.css">
+    <link rel="stylesheet" href="./css/style3.css">
+    <link rel="stylesheet" href="./css/style4.css">
+    <link rel="stylesheet" href="./css/style5.css">
+    
+    <!-- Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <style>
-      @font-face {
-        font-family: 'Noto Sans KR';
-        font-style: normal;
-        font-weight: 400;
-        src: url('../assets/fonts/pretendard/Pretendard-Black.woff2')
-          format('woff2');
-      }
-      @font-face {
-        font-family: 'Noto Sans KR';
-        font-style: normal;
-        font-weight: 700;
-        src: url('../assets/fonts/pretendard/Pretendard-Bold.woff2')
-          format('woff2');
-      }
+        @font-face {
+            font-family: 'Noto Sans KR';
+            font-style: normal;
+            font-weight: 400;
+            src: url('./fonts/NotoSansKR-Regular.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Noto Sans KR';
+            font-style: normal;
+            font-weight: 700;
+            src: url('./fonts/NotoSansKR-Bold.woff2') format('woff2');
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <!-- Header Section -->
     <header class="header">
-      <nav class="navbar">
-        <div class="nav-brand">H-LAB</div>
-        <ul class="nav-menu">
-          <li><a href="#intro">소개</a></li>
-          <li><a href="#features">기능</a></li>
-          <li><a href="#performance">성능</a></li>
-          <li><a href="#contact">구성</a></li>
-        </ul>
-      </nav>
+        <nav class="navbar">
+            <div class="nav-brand">
+                H-LAB
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#intro"><img src="../assets/icons/icon1.png" alt="Home Icon" class="nav-icon">소개</a></li>
+                <li><a href="#features"><img src="../assets/icons/icon2.png" alt="Features Icon" class="nav-icon">기능</a></li>
+                <li><a href="#performance"><img src="../assets/icons/icon3.png" alt="Performance Icon" class="nav-icon">성능</a></li>
+                <li><a href="#contact"><img src="../assets/icons/icon4.png" alt="Contact Icon" class="nav-icon">문의</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Section 1: Introduction -->
     <section id="intro" class="section intro-section">
-      <div class="container">
-        <div class="content-wrapper">
-          <div class="text-content">
-            <h1 class="section-title">
-              HTTP Performance Lab에 오신 것을 환영합니다
-            </h1>
-            <p class="section-description">
-              HTTP/1.1, HTTP/2, HTTP/3의 성능 차이를 실제로 측정하고 비교할 수
-              있는 테스트 환경입니다. 다양한 리소스를 통해 실제 웹 사이트 환경을
-              시뮬레이션합니다.
-            </p>
-            <button class="cta-button">테스트 시작하기</button>
-          </div>
-          <div class="image-grid">
-            <img
-              src="../assets/imgs/Hlab_img1.png"
-              alt="HTTP Lab Image 1"
-              class="grid-image"
-            />
-            <img
-              src="../assets/imgs/Hlab_img2.png"
-              alt="HTTP Lab Image 2"
-              class="grid-image"
-            />
-            <img
-              src="../assets/imgs/Hlab_img3.png"
-              alt="HTTP Lab Image 3"
-              class="grid-image"
-            />
-            <img
-              src="../assets/imgs/Hlab_img4.png"
-              alt="HTTP Lab Image 4"
-              class="grid-image"
-            />
-            <img
-              src="../assets/imgs/Hlab_img5.png"
-              alt="HTTP Lab Image 5"
-              class="grid-image"
-            />
-            <img
-              src="../assets/imgs/Hlab_img6.png"
-              alt="HTTP Lab Image 6"
-              class="grid-image"
-            />
-          </div>
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <h1 class="section-title">HTTP Performance Lab에 오신 것을 환영합니다</h1>
+                    <p class="section-description">
+                        HTTP/1.1, HTTP/2, HTTP/3의 성능 차이를 실제로 측정하고 비교할 수 있는 
+                        전문적인 테스트 환경입니다. 다양한 리소스를 통해 실제 웹 사이트 환경을 시뮬레이션합니다.
+                    </p>
+                    <div class="feature-highlights">
+                        <div class="highlight-item">
+                            <img src="../assets/icons/icon5.png" alt="Real-time Icon" class="highlight-icon">
+                            <span>실시간 모니터링</span>
+                        </div>
+                        <div class="highlight-item">
+                            <img src="../assets/icons/icon6.png" alt="Multi-protocol Icon" class="highlight-icon">
+                            <span>다중 프로토콜</span>
+                        </div>
+                        <div class="highlight-item">
+                            <img src="../assets/icons/icon7.png" alt="Optimization Icon" class="highlight-icon">
+                            <span>최적화 전략</span>
+                        </div>
+                    </div>
+                    <button class="cta-button">
+                        <img src="../assets/icons/icon8.png" alt="Start Icon" class="button-icon">
+                        테스트 시작하기
+                    </button>
+                </div>
+                <div class="image-grid">
+                    <img src="../assets/imgs/Hlab_img1.jpg" alt="HTTP Lab Image 1" class="grid-image">
+                    <img src="../assets/imgs/Hlab_img2.png" alt="HTTP Lab Image 2" class="grid-image">
+                    <img src="../assets/imgs/Hlab_img3.jpg" alt="HTTP Lab Image 3" class="grid-image">
+                    <img src="../assets/imgs/Hlab_img4.png" alt="HTTP Lab Image 4" class="grid-image">
+                    <img src="../assets/imgs/Hlab_img5.jpg" alt="HTTP Lab Image 5" class="grid-image">
+                    <img src="../assets/imgs/Hlab_img6.png" alt="HTTP Lab Image 6" class="grid-image">
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- Section 2: Features -->
     <section id="features" class="section features-section">
-      <div class="container">
-        <h2 class="section-title">주요 기능</h2>
-        <div class="features-grid">
-          <div class="feature-card">
-            <img
-              src="../assets/imgs/Hlab_img7.png"
-              alt="Performance Monitoring"
-              class="feature-image"
-            />
-            <h3>실시간 성능 모니터링</h3>
-            <p>Lighthouse와 DevTools를 활용한 정확한 성능 측정</p>
-          </div>
-          <div class="feature-card">
-            <img
-              src="../assets/imgs/Hlab_img8.png"
-              alt="Multi Protocol"
-              class="feature-image"
-            />
-            <h3>다중 프로토콜 지원</h3>
-            <p>HTTP/1.1, HTTP/2, HTTP/3 프로토콜별 성능 비교</p>
-          </div>
-          <div class="feature-card">
-            <img
-              src="../assets/imgs/Hlab_img9.png"
-              alt="Resource Analysis"
-              class="feature-image"
-            />
-            <h3>리소스 분석</h3>
-            <p>CSS, JS, 이미지, 폰트 등 다양한 리소스 로딩 분석</p>
-          </div>
-          <div class="feature-card">
-            <img
-              src="../assets/imgs/Hlab_img10.png"
-              alt="Network Optimization"
-              class="feature-image"
-            />
-            <h3>네트워크 최적화</h3>
-            <p>병렬 연결, 압축, 캐싱 전략 테스트</p>
-          </div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">주요 기능</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <img src="../assets/icons/icon9.png" alt="Monitor Icon" class="feature-icon">
+                        <img src="../assets/imgs/Hlab_img7.jpg" alt="Performance Monitoring" class="feature-image">
+                    </div>
+                    <h3>실시간 성능 모니터링</h3>
+                    <p>Lighthouse와 DevTools를 활용한 정확한 성능 측정</p>
+                    <div class="feature-tags">
+                        <span class="tag">
+                            <img src="../assets/icons/icon10.png" alt="Tag Icon" class="tag-icon">
+                            실시간
+                        </span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <img src="../assets/icons/icon11.png" alt="Protocol Icon" class="feature-icon">
+                        <img src="../assets/imgs/Hlab_img8.png" alt="Multi Protocol" class="feature-image">
+                    </div>
+                    <h3>다중 프로토콜 지원</h3>
+                    <p>HTTP/1.1, HTTP/2, HTTP/3 프로토콜별 성능 비교</p>
+                    <div class="feature-tags">
+                        <span class="tag">
+                            <img src="../assets/icons/icon12.png" alt="Multi Icon" class="tag-icon">
+                            멀티
+                        </span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <img src="../assets/icons/icon13.png" alt="Analysis Icon" class="feature-icon">
+                        <img src="../assets/imgs/Hlab_img9.jpg" alt="Resource Analysis" class="feature-image">
+                    </div>
+                    <h3>리소스 분석</h3>
+                    <p>CSS, JS, 이미지, 폰트 등 다양한 리소스 로딩 분석</p>
+                    <div class="feature-tags">
+                        <span class="tag">
+                            <img src="../assets/icons/icon14.png" alt="Analysis Icon" class="tag-icon">
+                            분석
+                        </span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <img src="../assets/icons/icon15.png" alt="Optimization Icon" class="feature-icon">
+                        <img src="../assets/imgs/Hlab_img10.png" alt="Network Optimization" class="feature-image">
+                    </div>
+                    <h3>네트워크 최적화</h3>
+                    <p>병렬 연결, 압축, 캐싱 전략 테스트</p>
+                    <div class="feature-tags">
+                        <span class="tag">
+                            <img src="../assets/icons/icon16.png" alt="Speed Icon" class="tag-icon">
+                            최적화
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="tools-section">
+                <h3 class="tools-title">
+                    지원 도구
+                </h3>
+                <div class="tools-grid">
+                    <div class="tool-item">
+                        <img src="../assets/icons/icon17.png" alt="Lighthouse Icon" class="tool-icon">
+                        <span>Lighthouse</span>
+                    </div>
+                    <div class="tool-item">
+                        <img src="../assets/icons/icon18.png" alt="DevTools Icon" class="tool-icon">
+                        <span>DevTools</span>
+                    </div>
+                    <div class="tool-item">
+                        <img src="../assets/icons/icon19.png" alt="WebPageTest Icon" class="tool-icon">
+                        <span>WebPageTest</span>
+                    </div>
+                </div>
+            </div>
+            <div class="additional-images">
+                <img src="../assets/imgs/Hlab_img11.jpg" alt="Additional Image 1" class="additional-image">
+                <img src="../assets/imgs/Hlab_img12.png" alt="Additional Image 2" class="additional-image">
+                <img src="../assets/imgs/Hlab_img13.jpg" alt="Additional Image 3" class="additional-image">
+            </div>
         </div>
-        <div class="additional-images">
-          <img
-            src="../assets/imgs/Hlab_img11.png"
-            alt="Additional Image 1"
-            class="additional-image"
-          />
-          <img
-            src="../assets/imgs/Hlab_img12.png"
-            alt="Additional Image 2"
-            class="additional-image"
-          />
-          <img
-            src="../assets/imgs/Hlab_img13.png"
-            alt="Additional Image 3"
-            class="additional-image"
-          />
-        </div>
-      </div>
     </section>
 
     <!-- Section 3: Performance -->
     <section id="performance" class="section performance-section">
-      <div class="container">
-        <div class="performance-content">
-          <div class="performance-text">
-            <h2 class="section-title">성능 측정 결과</h2>
-            <p class="section-description">
-              실제 테스트 환경에서 측정된 HTTP 프로토콜별 성능 데이터를
-              확인하세요. 각 프로토콜의 장단점과 최적화 전략을 비교 분석할 수
-              있습니다.
-            </p>
-            <div class="performance-stats">
-              <div class="stat-item">
-                <span class="stat-number">HTTP/1.1</span>
-                <span class="stat-label">기준 프로토콜</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">HTTP/2</span>
-                <span class="stat-label">멀티플렉싱</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">HTTP/3</span>
-                <span class="stat-label">최신 표준</span>
-              </div>
+        <div class="container">
+            <div class="performance-content">
+                <div class="performance-text">
+                    <h2 class="section-title">성능 측정 결과</h2>
+                    <p class="section-description">
+                        실제 테스트 환경에서 측정된 HTTP 프로토콜별 성능 데이터를 확인하세요.
+                        각 프로토콜의 장단점과 최적화 전략을 비교 분석할 수 있습니다.
+                    </p>
+                    <div class="performance-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">HTTP/1.1</span>
+                            <span class="stat-label">기준 프로토콜</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">HTTP/2</span>
+                            <span class="stat-label">멀티플렉싱</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">HTTP/3</span>
+                            <span class="stat-label">최신 표준</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="performance-images">
+                    <img src="../assets/imgs/Hlab_img14.png" alt="Performance Chart 1" class="perf-image">
+                    <img src="../assets/imgs/Hlab_img15.jpg" alt="Performance Chart 2" class="perf-image">
+                    <img src="../assets/imgs/Hlab_img16.png" alt="Performance Chart 3" class="perf-image">
+                    <img src="../assets/imgs/Hlab_img17.jpg" alt="Performance Chart 4" class="perf-image">
+                    <img src="../assets/imgs/Hlab_img18.png" alt="Performance Chart 5" class="perf-image">
+                </div>
             </div>
-          </div>
-          <div class="performance-images">
-            <img
-              src="../assets/imgs/Hlab_img14.png"
-              alt="Performance Chart 1"
-              class="perf-image"
-            />
-            <img
-              src="../assets/imgs/Hlab_img15.png"
-              alt="Performance Chart 2"
-              class="perf-image"
-            />
-            <img
-              src="../assets/imgs/Hlab_img16.png"
-              alt="Performance Chart 3"
-              class="perf-image"
-            />
-            <img
-              src="../assets/imgs/Hlab_img17.png"
-              alt="Performance Chart 4"
-              class="perf-image"
-            />
-            <img
-              src="../assets/imgs/Hlab_img18.png"
-              alt="Performance Chart 5"
-              class="perf-image"
-            />
-          </div>
         </div>
-      </div>
     </section>
 
     <!-- Section 4: Contact -->
     <section id="contact" class="section contact-section">
-      <div class="container">
-        <h2 class="section-title">테스트 환경 구성</h2>
-        <div class="contact-content">
-          <div class="contact-info">
-            <p class="section-description">
-              이 테스트 페이지는 다양한 리소스를 포함하여 실제 웹사이트와 유사한
-              환경을 제공합니다. Network 탭에서 로딩 패턴을 확인해보세요.
-            </p>
-            <ul class="resource-list">
-              <li>CSS 파일 5개 (스타일링)</li>
-              <li>JavaScript 파일 5개 (인터랙션)</li>
-              <li>이미지 파일 20개 (JPG/PNG 혼합)</li>
-              <li>웹폰트 2개 (Regular/Bold)</li>
-            </ul>
-          </div>
-          <div class="contact-images">
-            <img
-              src="../assets/imgs/Hlab_img19.png"
-              alt="Contact Image 1"
-              class="contact-image"
-            />
-            <img
-              src="../assets/imgs/Hlab_img20.png"
-              alt="Contact Image 2"
-              class="contact-image"
-            />
-          </div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">테스트 환경 구성</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="section-description">
+                        이 테스트 페이지는 다양한 리소스를 포함하여 실제 웹사이트와 
+                        유사한 환경을 제공합니다. Network 탭에서 로딩 패턴을 확인해보세요.
+                    </p>
+                    <div class="resource-categories">
+                        <div class="resource-category">
+                            <h4>
+                                스타일시트
+                            </h4>
+                            <ul class="resource-list">
+                                <li>CSS 파일 5개 (스타일링)</li>
+                                <li>반응형 디자인 지원</li>
+                                <li>애니메이션 효과</li>
+                            </ul>
+                        </div>
+                        <div class="resource-category">
+                            <h4>
+                                스크립트
+                            </h4>
+                            <ul class="resource-list">
+                                <li>JavaScript 파일 5개 (인터랙션)</li>
+                                <li>성능 모니터링</li>
+                                <li>사용자 경험 개선</li>
+                            </ul>
+                        </div>
+                        <div class="resource-category">
+                            <h4>
+                                미디어
+                            </h4>
+                            <ul class="resource-list">
+                                <li>이미지 파일 20개 (JPG/PNG 혼합)</li>
+                                <li>아이콘 파일 20개 (PNG)</li>
+                                <li>웹폰트 2개 (Regular/Bold)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-images">
+                    <img src="../assets/imgs/Hlab_img19.png" alt="Contact Image 1" class="contact-image">
+                    <img src="../assets/imgs/Hlab_img20.png" alt="Contact Image 2" class="contact-image">
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <p>&copy; 2025 H-LAB (HTTP Performance Lab)</p>
-          <p>HTTP 프로토콜 성능 측정 및 최적화 전략 연구소</p>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 H-LAB (HTTP Performance Lab) - Created by Assistant</p>
+                <p>HTTP 프로토콜 성능 측정 및 최적화 전략 연구소</p>
+            </div>
         </div>
-      </div>
     </footer>
 
     <!-- JavaScript Files -->
@@ -262,5 +283,5 @@
     <script defer src="./js/app3.js"></script>
     <script defer src="./js/app4.js"></script>
     <script defer src="./js/app5.js"></script>
-  </body>
+</body>
 </html>
