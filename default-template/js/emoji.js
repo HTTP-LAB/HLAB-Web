@@ -1,7 +1,7 @@
 
 const section = document.getElementById('emoji-container');
 
-for (let i = 1; i <= 500; i++) {
+for (let i = 1; i <= 1000; i++) {
 const img = document.createElement('img');
 img.src = `../assets/emoji/image${i}.png`;
 img.alt = `emoji${i}`;
